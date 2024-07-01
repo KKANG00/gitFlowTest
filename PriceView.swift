@@ -2,14 +2,12 @@ import SwiftUI
 
 struct PriceView: View {
     private let prices: [[String]]
-    private let color: Color
+    private let color: Color = .red
 
     init(
-        prices: [[String]],
-        color: Color
+        prices: [[String]]
     ) {
         self.prices = prices
-        self.color = color
     }
 
     var body: some View {
