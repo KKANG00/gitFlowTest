@@ -2,30 +2,28 @@ import SwiftUI
 
 struct PriceView: View {
     private let prices: [[String]]
-    private let color: Color
 
     init(
-        prices: [[String]],
-        color: Color
+        prices: [[String]]
     ) {
         self.prices = prices
-        self.color = color
     }
 
     var body: some View {
-        VStack(alignment: .trailing, spacing: 2) {
+        HStack {
             ForEach(prices, id: \.self) { prices in
                 HStack(spacing: 4) {
                     Spacer(minLength: 0)
                     ForEach(prices, id: \.self) { price in
                         HStack(spacing: 0) {
                             Text(price)
-                                .background(color)
+                                .background(.blue)
                         }
                     }
-                }.frame(maxWidth: .infinity)
+                }
+                .frame(maxWidth: .infinity)
             }
         }
-        .border(.black)
     }
 }
+
