@@ -23,6 +23,7 @@ struct PriceView: View {
                 }
                 .frame(maxWidth: .infinity)
             }
+            Text("This is Price View")
         }
     }
 }
